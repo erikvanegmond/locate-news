@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+
+<!-- Example based on http://bl.ocks.org/mbostock/3887118 -->
+<!-- Tooltip example from http://www.d3noob.org/2013/01/adding-tooltips-to-d3js-graph.html -->
+<link href="css/style.css" rel="stylesheet">
+
+<style>
+    body {
+      font: 11px sans-serif;
+  }
+
+  .axis path,
+  .axis line {
+      fill: none;
+      stroke: #000;
+      shape-rendering: crispEdges;
+  }
+
+  .dot {
+        fill: #77a1d9;
+        stroke: #4f85ce;
+        stroke-width: 1px;  
+
+  }
+
+  .dot:hover {
+        fill: #4f85ce;
+        stroke: #77a1d9;
+        stroke-width: 10px; 
+        z-index: 10; 
+
+  }
+
+  .tooltip {
+        background-color: #f2f2f2;
+        position: absolute;
+        z-index: 10;
+        top: 10px;
+    }
+    .table{
+            margin-bottom: 0px;
+        }
+</style>
+<body>
+<script src="js/d3.js"></script>
+<script src="js/scatter.min.js"></script>
+</body>
+</html>

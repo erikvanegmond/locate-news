@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link href="css/style.css" rel="stylesheet">
+
+<body>
+<script src="js/d3.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/handlebars.js"></script>
+<script src="js/sorttable.js"></script>
+
+<div id="mapToggle" class="btn-group">
+    <button type="button" class="btn btn-primary active" id="map1">Aantal artikelen per inwoner</button>
+    <button type="button" class="btn btn-primary" id="map2"> Aantal artikelen</button>
+</div>
+
+<div id="chart"></div>
+
+<div id="dataTableContainer"></div>
+
+<script id="dataTable" type="text/x-handlebars-template">
+    <table class="table table-condensed">
+        <tr>
+            <td colspan="2">{{d.GM_NAAM}}</td>
+        </tr>
+        <tr>
+            <td>Aantal artikelen</td>
+            <td>{{d.articleCount}}</td>
+        </tr>
+        <tr>
+            <td>Aantal inwoners</td>
+            <td>{{d.population}}</td>
+        </tr>
+        <tr>
+            <td>Artikelen per inwoner</td>
+            <td>{{d.relativeArticleCount}}</td>
+        </tr>
+        <tr>
+            <td>Artikelen</td>
+            <td>{{artikelen}}</td>
+        </tr>
+    </table>
+</script>
+
+<div id="tooltipContainer"></div>
+
+<script id="HBTooltip" type="text/x-handlebars-template">
+
+    <table class="table table-condensed">
+        <tr>
+            <td colspan="2">{{d.GM_NAAM}}</td>
+        </tr>
+        <tr>
+            <td>Aantal artikelen</td>
+            <td>{{d.articleCount}}</td>
+        </tr>
+        <tr>
+            <td>Aantal inwoners</td>
+            <td>{{d.population}}</td>
+        </tr>
+    </table>
+</script>
+
+<script src="js/map.min.js"></script>
+
+</body>
+</html>
